@@ -1,5 +1,6 @@
 import argparse
 import asyncio
+import os
 from playwright.async_api import async_playwright
 from datetime import datetime
 
@@ -13,8 +14,10 @@ GENCON_CART_URL = "https://www.gencon.com/my_cart"
 GENCON_BILLING_URL = "https://www.gencon.com/billing"
 GENCON_RECEIPT_URL_PREFIX = "https://www.gencon.com/shopping_cart/receipt"
 
+
 EMAIL = os.getenv("GENCON_EMAIL")
 PASSWORD = os.getenv("GENCON_PASSWORD")
+
 
 CHECK_INTERVAL_SECONDS = 300  # 5 minutes
 TICKET_CHECKBOX_SELECTOR = "#tickets_for_202567"  # Checkbox for "Myself"
